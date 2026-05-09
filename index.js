@@ -58,7 +58,7 @@ async function searchEvents() {
         allResults = allResults.concat(response.data.organic);
       }
     } catch (error) {
-      console.error(`Error searching for "${query}":`, error.message);
+      console.error(`Error searching for "${query}":`, error.response ? error.response.status : error.message);
     }
   }
 
